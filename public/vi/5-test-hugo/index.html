@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Thiết lập Tài Khoản AWS :: Thiết lập AWS Account</title>
+    <title>Tạo mới tài khoản AWS :: Thiết lập AWS Account</title>
 
     
     <link href="/css/nucleus.css?1725117739" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/">
+  <body class="" data-url="/vi/5-test-hugo/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -109,8 +109,8 @@
   
     
     <li data-nav-id="/vi/5-test-hugo/" title="Tạo mới tài khoản AWS" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/vi/5-test-hugo/">
@@ -335,7 +335,7 @@
                   
                     
                     
-                      <option id="en" value="/">English</option>
+                      <option id="en" value="/5-test-hugo/">English</option>
                     
                   
               
@@ -349,7 +349,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/5-test-hugo/" selected>Tiếng Việt</option>
                     
                   
               
@@ -412,47 +412,134 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Thiết lập Tài Khoản AWS</a> > Tạo mới tài khoản AWS
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Tạo mới tài khoản AWS
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="tạo-tài-khoản-aws-đầu-tiên">Tạo tài khoản AWS đầu tiên</h1>
-<h4 id="tổng-quan">Tổng quan</h4>
-<p>Trong bài lab đầu tiên này, bạn sẽ tạo mới <strong>tài khoản AWS</strong> đầu tiên của mình, tạo <strong>MFA</strong> (Multi-factor Authentication) để gia tăng bảo mật tài khoản của bạn. Bước tiếp theo bạn sẽ tạo <strong>Admin Group</strong>, <strong>Admin User</strong> để quản lý quyền truy cập vào các tài nguyên trong tài khoản của mình thay vì sử dụng user root.<br>
-Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn đề, bạn sẽ được hướng dẫn hỗ trợ xác thực tài khoản với <strong>AWS Support</strong>.</p>
-<h4 id="tài-khoản-aws-aws-account">Tài khoản AWS (AWS Account)</h4>
-<p><strong>Tài khoản AWS</strong> là phương tiện để bạn có thể truy cập và sử dụng những tài nguyên và dịch vụ của AWS. Theo mặc định, mỗi tài khoản AWS sẽ có một <em>root user</em>. <em>Root user</em> có toàn quyền với tài khoản AWS của bạn, và quyền hạn của root user không thể bị giới hạn. Nếu bạn mới sử dụng tài khoản AWS lần đầu tiên, bạn sẽ truy cập vào tài khoản dưới danh nghĩa của <em>root user</em>.</p>
 
-<div class="notices note" ><p>Chính vì quyền hạn của <strong>root user</strong> không thể bị giới hạn, AWS khuyên bạn không nên sử dụng trực tiếp <em>root user</em> cho bất kỳ công tác nào. Thay vào đó, bạn nên tạo ra một <em>IAM User</em> và trao quyền quản trị cho <em>IAM User</em> đó để dễ dàng quản lý và giảm thiểu rủi ro.</p>
-</div>
-
-<h4 id="mfa-multi-factor-authentication">MFA (Multi-factor Authentication)</h4>
-<p><strong>MFA</strong> là một tính năng được sử dụng để gia tăng bảo mật của tài khoản AWS. Nếu MFA được kích hoạt, bạn sẽ phải nhập mã OTP (One-time Password) mỗi lần bạn đăng nhập vào tài khoản AWS.</p>
-<h4 id="iam-group">IAM Group</h4>
-<p><strong>IAM Group</strong>  là một công cụ quản lý người dùng (<em>IAM User</em>) của AWS. Một IAM Group có thể chứa nhiều IAM User. Các IAM User ở trong một IAM Group đều hưởng chung quyền hạn mà IAM Group đó được gán cho.</p>
-<h4 id="iam-user">IAM User</h4>
-<p><strong>IAM User</strong> là một đơn vị người dùng của AWS. Khi bạn đăng nhập vào AWS, bạn sẽ phải đăng nhập dưới danh nghĩa của một IAM User. Nếu bạn mới đăng nhập vào AWS lần đầu tiên, bạn sẽ đăng nhập dưới danh nghĩa của <em>root user</em> (tạm dịch là người dùng gốc). Ngoài <em>root user</em> ra, bạn có thể tạo ra nhiều IAM User khác để cho phép người khác truy cập <strong>dài hạn</strong> vào tài nguyên AWS trong tài khoản AWS của bạn.</p>
-<h4 id="aws-support">AWS Support</h4>
-<p><strong>AWS Support</strong> là một đơn vị cung cấp các dịch vụ hỗ trợ khách hàng của AWS.</p>
-<h4 id="nội-dung-chính">Nội dung chính</h4>
+	<p><strong>Nội dung:</strong></p>
+<ul>
+<li><a href="#t%E1%BA%A1o-t%C3%A0i-kho%E1%BA%A3n-aws">Tạo tài khoản AWS</a></li>
+<li><a href="#th%C3%AAm-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-thanh-to%C3%A1n">Thêm phương thức thanh toán</a></li>
+<li><a href="#x%C3%A1c-th%E1%BB%B1c-s%E1%BB%91-%C4%91i%E1%BB%87n-tho%E1%BA%A1i-c%E1%BB%A7a-b%E1%BA%A1n">Xác thực số điện thoại của bạn</a></li>
+<li><a href="#ch%E1%BB%8Dn-support-plan">Chọn Support Plan</a></li>
+<li><a href="#%C4%91%E1%BB%A3i-account-c%E1%BB%A7a-b%E1%BA%A1n-%C4%91%C6%B0%E1%BB%A3c-k%C3%ADch-ho%E1%BA%A1t">Đợi account của bạn được kích hoạt</a></li>
+</ul>
+<h4 id="tạo-tài-khoản-aws">Tạo tài khoản AWS</h4>
 <ol>
-<li><a href="1-create-new-aws-account/">Tạo tài khoản AWS</a></li>
-<li><a href="2-mfa-setup-for-aws-user-(root)/">Thiết lập MFA cho tài khoản AWS (Root)</a></li>
-<li><a href="3-create-admin-user-and-group/">Tài khoản và Nhóm Admin</a></li>
-<li><a href="4-verify-new-account/">Hỗ trợ Xác thực Tài khoản</a></li>
+<li>Đi đến trang <a href="https://aws.amazon.com/">Amazon Web Service homepage</a>.</li>
+<li>Chọn <strong>Create an AWS Account</strong> ở góc trên bên phải.
+<ul>
+<li><em><strong>Ghi Chú:</strong> Nếu bạn không thấy <strong>Create an AWS Account</strong>, chọn <strong>Sign In to the Console</strong> sau đó chọn <strong>Create a new AWS Account</strong>.</em></li>
+</ul>
+</li>
+<li>Nhập thông tin tài khoảng và chọn <strong>Continue</strong>.
+<ul>
+<li><em><strong>Quan Trọng</strong>: Hãy chắc chắn bạn nhập đúng thông tin, đặc biệt là email.</em></li>
+</ul>
+</li>
+<li>Chọn loại account.
+<ul>
+<li><em><strong>Ghi chú</strong>: Personal và Professional đều có chung tính năng.</em></li>
+</ul>
+</li>
+<li>Nhập thông tin công ty hoặc thông tin cá nhân của bạn.</li>
+<li>Đọc và đồng ý <a href="https://aws.amazon.com/agreement/">AWS Customer Agreement</a>.</li>
+<li>Chọn <strong>Create Account</strong> và <strong>Continue</strong>.</li>
 </ol>
+<h4 id="thêm-phương-thức-thanh-toán">Thêm phương thức thanh toán</h4>
+<ul>
+<li>Nhập thông tin thẻ tín dụng của bạn và chọn <strong>Verify and Add</strong>.
+<ul>
+<li><em><strong>Ghi chú</strong>: Bạn có thể chọn 1 địa chỉ khác cho tài khoản của bạn bằng cách chọn <strong>Use a new address</strong> trước khi <strong>Verify and Add</strong>.</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="xác-thực-số-điện-thoại-của-bạn">Xác thực số điện thoại của bạn</h4>
+<ol>
+<li>Nhập số điện thoại.</li>
+<li>Nhập mã security check sau đó chọn <strong>Send SMS</strong>.</li>
+<li>Nhập mã code được gửi đến số điện thoại của bạn.</li>
+</ol>
+<h4 id="chọn-support-plan">Chọn Support Plan</h4>
+<ul>
+<li>Trong trang <strong>Select a support plan</strong>, chọn 1 plan có hiệu lực, để so sánh giữa cách plan, bạn hãy xem <a href="https://aws.amazon.com/premiumsupport/plans/">Compare AWS Support Plans</a>.</li>
+</ul>
+<h4 id="đợi-account-của-bạn-được-kích-hoạt">Đợi account của bạn được kích hoạt</h4>
+<ul>
+<li>Sau khi chọn <strong>Support plan</strong>, account thường được kích sau sau vài phút, nhưng quá trình có thể cần tốn đến 24 tiếng. Bạn vẫn có thể đăng nhập vào account AWS lúc này, Trang chủ AWS có thể sẽ hiển thị một nút “Complete Sign Up” trong thời gian này, cho dù bạn đã hoàn thành tất cả các bước ở phần đăng kí.</li>
+<li>Sau khi nhận được email xác nhận account của bạn đã được kích hoạt, bạn có thể truy cập vào tất cả dịch vụ của AWS.</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -503,6 +590,7 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
             
                 
                     
+                    
                 
                 
 
@@ -518,6 +606,9 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -621,8 +712,10 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
 	 
 	 
 		
+			<a class="nav nav-prev" href="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/vi/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -660,4 +753,3 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
 </script>
   </body>
 </html>
-
