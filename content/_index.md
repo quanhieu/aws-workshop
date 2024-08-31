@@ -1,48 +1,59 @@
 +++
-title = "Setting up an AWS account"
+title = "Host Static Website on S3 and CloudFront"
 date = 2024
 weight = 1
 chapter = false
 +++
 
-# Creating your first AWS account
+# Host Static Website on S3 and CloudFront
 
-#### Overview
+## Why Deploy a Static Website Using Amazon S3 and CloudFront?
 
-In this first lab, you will be creating your new **AWS** account and use Multi-factor Authentication (**MFA**) to improve your account security. Next, you will create an **Administrator Group** and **Admin User** to manage access to resources in your account instead of using the root user. \
-Finally, we will step through account authentication with **AWS Support** in the event you experience authentication problems.
+### High Performance and Page Load Speed:
 
-#### AWS Account
+- **S3** stores static files (HTML, CSS, JS) on the cloud platform with automatic scaling and quick access.
+- **CloudFront** is a Content Delivery Network (CDN) that helps distribute content to users from the nearest servers, reducing latency and increasing page load speed.
 
-**An AWS account** is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a _root user_. The _root user_ has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the _root user_.
+### Cost Savings:
 
-{{% notice note%}}
-As a best practice, do not use the AWS account _root user_ for any task where it's not required. Instead, create a new IAM user for each person that requires administrator access. Thereafter, the users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interaction should be through the AWS account's users and their own keys instead of the root user. However, to perform some account and service management tasks, you must log in using the root user credentials.
-{{% /notice%}}
+- Deploying a static website on **S3** is cost-effective, charging only based on storage and bandwidth usage, with no complex server management required.
+- **CloudFront** optimizes bandwidth by caching content close to users, reducing direct access to S3 and thereby cutting costs.
 
-#### Multi-Factor Authentication (MFA)
+### Superior Scalability:
 
-**MFA** adds extra security because it requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their regular sign-in credentials when they access AWS websites or services.
+- **S3** and **CloudFront** automatically handle high traffic without complex configurations, suitable for websites with rapid growth needs.
+- No worries about server overload when many users access the site simultaneously.
 
-#### IAM User Group
+### Enhanced Security:
 
-An **IAM user group** is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. Any user in that user group automatically has the permissions that are assigned to the user group.
+- **CloudFront** allows HTTPS setup, protecting data during transmission.
+- Use **Origin Access Control (OAC)** to ensure only CloudFront has access to S3, protecting data from unauthorized access.
+- AWS provides advanced security options like **AWS WAF (Web Application Firewall)** and **Shield** to protect websites from DDoS attacks.
 
-#### IAM User
+### Easy Management and Automation:
 
-An **IAM user** is an entity that you create in AWS to represent the person or application that uses it to interact with AWS. A user in AWS consists of a name and credentials. \
-Please note that an IAM user with administrator permissions is not the same thing as the AWS account root user.
+- Configuring, deploying, and managing a static website is straightforward via AWS Console or by using **Infrastructure as Code** with AWS CloudFormation or Terraform.
+- AWS offers automatic backup and recovery features, ensuring service continuity.
 
-#### AWS Support
+### Integration with Other AWS Services:
 
-AWS Basic Support offers all AWS customers access to our Resource Center, Service Health Dashboard, Product FAQs, Discussion Forums, and Support for Health Checks – at no additional charge. Customers who desire a deeper level of support can subscribe to AWS Support at the Developer, Business, or Enterprise level.
+- Easily integrate with **AWS Lambda**, **API Gateway**, or **AWS Amplify** to create more complex web applications from a static base.
+- **AWS IAM** can be used to manage access permissions, providing additional security control.
 
-Customers who choose AWS Support gain one-on-one, fast-response support from AWS engineers. The service helps customers use AWS's products and features. With pay-by-the-month pricing and unlimited support cases, customers are freed from long-term commitments. Customers with operational issues or technical questions can contact a team of support engineers and receive predictable response times and personalized support.
+## Benefits of Using S3 and CloudFront:
+
+- **Faster Response Time**: Content is distributed from the nearest edge locations to users through CloudFront, reducing page load time.
+- **Data Security and Access Control**: Security settings help better control who can access your content.
+- **High Reliability**: AWS services have a high SLA, ensuring website availability.
+- **SEO Optimization and User Experience**: Fast page load speeds improve SEO rankings and overall user experience.
+- **No Complex Maintenance Required**: No worries about server maintenance or regular software updates, reducing workload for the development team.
+
+Deploying a static website using S3 and CloudFront is simple, cost-effective, and provides a fast, secure, and stable web experience for users!
 
 #### Main Content
 
-1. [Creating a new AWS Account](1-create-new-aws-account/)
-2. [Setting up MFA for the AWS Account root user](<2-MFA-Setup-For-AWS-User-(root)>)
-3. [Creating an Administrator Accounts and Groups](3-create-admin-user-and-group/)
-4. [Getting support for Account Authentication](4-verify-new-account/)
+1. [Create and Configure the S3 Bucket](1-Create-s3-bucket-upload-file/)
+2. [Config permission S3 bucket](2-Config-permission-s3-bucket/)
+3. [Create CloudFront Distribution](3-Create-cloudFront-distribution/)
+
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->

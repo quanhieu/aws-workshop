@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: AWS Account Setup</title>
+    <title>Set Up Permissions :: AWS Account Setup</title>
 
     
     <link href="/css/nucleus.css?1725122611" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/2-config-permission-s3-bucket/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -109,8 +109,8 @@
   
     
     <li data-nav-id="/2-config-permission-s3-bucket/" title="Set Up Permissions" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/2-config-permission-s3-bucket/">
@@ -187,7 +187,7 @@
                   
                     
                     
-                      <option id="en" value="/categories/" selected>English</option>
+                      <option id="en" value="/2-config-permission-s3-bucket/" selected>English</option>
                     
                   
               
@@ -201,7 +201,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/2-config-permission-s3-bucket/">Tiếng Việt</option>
                     
                   
               
@@ -287,7 +287,7 @@
             
           
           
-            <a href='/'>Host Static Website on S3 and CloudFront</a> > Categories
+            <a href='/'>Host Static Website on S3 and CloudFront</a> > Set Up Permissions
           
         
           
@@ -298,7 +298,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-2-set-up-permissions">Step 2: Set Up Permissions</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -314,7 +318,7 @@
           
             <h1>
               
-              Categories
+              Set Up Permissions
             </h1>
           
 
@@ -322,11 +326,39 @@
 
 
 
-
-
+	<p><strong>Content:</strong></p>
+<h2 id="step-2-set-up-permissions">Step 2: Set Up Permissions</h2>
+<ol>
+<li>
+<p><strong>Configure the Bucket Policy to Allow Public Access</strong></p>
 <ul>
-	
+<li>
+<p>Go to the “Permissions” tab &gt; “Bucket Policy” and add the following policy to allow public access:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+  <span style="color:#f92672">&#34;Statement&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;PublicReadGetObject&#34;</span>,
+      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+      <span style="color:#f92672">&#34;Principal&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>,
+      <span style="color:#f92672">&#34;Action&#34;</span>: <span style="color:#e6db74">&#34;s3:GetObject&#34;</span>,
+      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:s3:::your-bucket-name/*&#34;</span>
+    }
+  ]
+}
+</code></pre></div></li>
 </ul>
+</li>
+<li>
+<p><strong>Verify Permissions</strong></p>
+<ul>
+<li>Ensure the files in the bucket can be accessed publicly via direct URLs.</li>
+</ul>
+</li>
+</ol>
+
+
+
 
 
 <footer class=" footline" >
@@ -383,6 +415,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -399,6 +432,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -419,8 +455,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/3-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

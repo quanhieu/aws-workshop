@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Thiết lập Tài Khoản AWS :: Thiết lập AWS Account</title>
+    <title>Host Static Website on S3 and CloudFront :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1725120588" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725120588" rel="stylesheet">
-    <link href="/css/hybrid.css?1725120588" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725120588" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725120588" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725120588" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725120588" rel="stylesheet">
-    <link href="/css/theme.css?1725120588" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725120588" rel="stylesheet">
+    <link href="/css/nucleus.css?1725122611" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725122611" rel="stylesheet">
+    <link href="/css/hybrid.css?1725122611" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725122611" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725122611" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725122611" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725122611" rel="stylesheet">
+    <link href="/css/theme.css?1725122611" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725122611" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725120588" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725122611" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725120588"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725122611"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725120588"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725120588"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725122611"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725122611"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725120588"></script>
+<script type="text/javascript" src="/js/search.js?1725122611"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" class="dd-item 
+    <li data-nav-id="/vi/1-create-s3-bucket-upload-file/" title="Tạo và Cấu Hình S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-new-aws-account/">
-          <b>1. </b>Tạo mới tài khoản AWS
+      <a href="/vi/1-create-s3-bucket-upload-file/">
+          <b>1. </b>Tạo và Cấu Hình S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/5-test-hugo/" title="Tạo mới tài khoản AWS" class="dd-item 
+    <li data-nav-id="/vi/2-config-permission-s3-bucket/" title="Thiết Lập Quyền Truy Cập" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-test-hugo/">
-          <b>1. </b>Tạo mới tài khoản AWS
+      <a href="/vi/2-config-permission-s3-bucket/">
+          <b>2. </b>Thiết Lập Quyền Truy Cập
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,161 +134,13 @@
  
   
     
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" class="dd-item 
+    <li data-nav-id="/vi/3-create-cloudfront-distribution/" title="Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/">
-          <b>2. </b>MFA cho Tài khoản AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Thiết bị MFA ảo" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Thiết bị MFA ảo
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="Khóa bảo mật U2F" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>Khóa bảo mật U2F
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Thiết bị MFA cứng" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Thiết bị MFA cứng
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-create-admin-user-and-group/" title="Tạo Admin Group và Admin User" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-create-admin-user-and-group/">
-          <b>3. </b>Tạo Admin Group và Admin User
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-verify-new-account/">
-          <b>4. </b>Hỗ trợ Xác thực Tài khoản
+      <a href="/vi/3-create-cloudfront-distribution/">
+          <b>3. </b>Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung
           
             <i class="fas fa-check read-icon"></i>
           
@@ -426,31 +278,56 @@
 </span>
 
  
-<h1 id="tạo-tài-khoản-aws-đầu-tiên">Tạo tài khoản AWS đầu tiên</h1>
-<h4 id="tổng-quan">Tổng quan</h4>
-<p>Trong bài lab đầu tiên này, bạn sẽ tạo mới <strong>tài khoản AWS</strong> đầu tiên của mình, tạo <strong>MFA</strong> (Multi-factor Authentication) để gia tăng bảo mật tài khoản của bạn. Bước tiếp theo bạn sẽ tạo <strong>Admin Group</strong>, <strong>Admin User</strong> để quản lý quyền truy cập vào các tài nguyên trong tài khoản của mình thay vì sử dụng user root.<br>
-Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn đề, bạn sẽ được hướng dẫn hỗ trợ xác thực tài khoản với <strong>AWS Support</strong>.</p>
-<h4 id="tài-khoản-aws-aws-account">Tài khoản AWS (AWS Account)</h4>
-<p><strong>Tài khoản AWS</strong> là phương tiện để bạn có thể truy cập và sử dụng những tài nguyên và dịch vụ của AWS. Theo mặc định, mỗi tài khoản AWS sẽ có một <em>root user</em>. <em>Root user</em> có toàn quyền với tài khoản AWS của bạn, và quyền hạn của root user không thể bị giới hạn. Nếu bạn mới sử dụng tài khoản AWS lần đầu tiên, bạn sẽ truy cập vào tài khoản dưới danh nghĩa của <em>root user</em>.</p>
-
-<div class="notices note" ><p>Chính vì quyền hạn của <strong>root user</strong> không thể bị giới hạn, AWS khuyên bạn không nên sử dụng trực tiếp <em>root user</em> cho bất kỳ công tác nào. Thay vào đó, bạn nên tạo ra một <em>IAM User</em> và trao quyền quản trị cho <em>IAM User</em> đó để dễ dàng quản lý và giảm thiểu rủi ro.</p>
-</div>
-
-<h4 id="mfa-multi-factor-authentication">MFA (Multi-factor Authentication)</h4>
-<p><strong>MFA</strong> là một tính năng được sử dụng để gia tăng bảo mật của tài khoản AWS. Nếu MFA được kích hoạt, bạn sẽ phải nhập mã OTP (One-time Password) mỗi lần bạn đăng nhập vào tài khoản AWS.</p>
-<h4 id="iam-group">IAM Group</h4>
-<p><strong>IAM Group</strong> là một công cụ quản lý người dùng (<em>IAM User</em>) của AWS. Một IAM Group có thể chứa nhiều IAM User. Các IAM User ở trong một IAM Group đều hưởng chung quyền hạn mà IAM Group đó được gán cho.</p>
-<h4 id="iam-user">IAM User</h4>
-<p><strong>IAM User</strong> là một đơn vị người dùng của AWS. Khi bạn đăng nhập vào AWS, bạn sẽ phải đăng nhập dưới danh nghĩa của một IAM User. Nếu bạn mới đăng nhập vào AWS lần đầu tiên, bạn sẽ đăng nhập dưới danh nghĩa của <em>root user</em> (tạm dịch là người dùng gốc). Ngoài <em>root user</em> ra, bạn có thể tạo ra nhiều IAM User khác để cho phép người khác truy cập <strong>dài hạn</strong> vào tài nguyên AWS trong tài khoản AWS của bạn.</p>
-<h4 id="aws-support">AWS Support</h4>
-<p><strong>AWS Support</strong> là một đơn vị cung cấp các dịch vụ hỗ trợ khách hàng của AWS.</p>
-<h4 id="nội-dung-chính">Nội dung chính</h4>
+<h1 id="host-static-website-on-s3-and-cloudfront">Host Static Website on S3 and CloudFront</h1>
+<h2 id="tại-sao-cần-triển-khai-website-tĩnh-bằng-amazon-s3-và-cloudfront">Tại sao cần triển khai Website Tĩnh bằng Amazon S3 và CloudFront?</h2>
+<h3 id="hiệu-suất-và-tốc-độ-tải-trang-cao">Hiệu suất và Tốc độ Tải Trang Cao:</h3>
+<ul>
+<li><strong>S3</strong> lưu trữ tệp tĩnh (HTML, CSS, JS) trên nền tảng đám mây với khả năng mở rộng tự động và truy cập nhanh chóng.</li>
+<li><strong>CloudFront</strong> là một Content Delivery Network (CDN) giúp phân phối nội dung tới người dùng từ các máy chủ gần nhất, giảm độ trễ và tăng tốc độ tải trang.</li>
+</ul>
+<h3 id="tiết-kiệm-chi-phí">Tiết Kiệm Chi Phí:</h3>
+<ul>
+<li>Triển khai website tĩnh trên <strong>S3</strong> có chi phí thấp, chỉ tính phí dựa trên dung lượng lưu trữ và băng thông sử dụng, không yêu cầu quản lý máy chủ phức tạp.</li>
+<li><strong>CloudFront</strong> giúp tối ưu hóa băng thông bằng cách lưu trữ nội dung cache gần người dùng, giảm số lần truy cập trực tiếp vào S3, từ đó giảm chi phí.</li>
+</ul>
+<h3 id="khả-năng-mở-rộng-vượt-trội">Khả Năng Mở Rộng Vượt Trội:</h3>
+<ul>
+<li><strong>S3</strong> và <strong>CloudFront</strong> tự động xử lý lưu lượng truy cập lớn mà không cần cấu hình phức tạp, phù hợp với các website có nhu cầu tăng trưởng nhanh.</li>
+<li>Không cần lo lắng về việc quá tải máy chủ khi có nhiều người truy cập cùng lúc.</li>
+</ul>
+<h3 id="bảo-mật-nâng-cao">Bảo Mật Nâng Cao:</h3>
+<ul>
+<li><strong>CloudFront</strong> cho phép thiết lập HTTPS, bảo vệ dữ liệu khi truyền qua mạng.</li>
+<li>Sử dụng <strong>Origin Access Control (OAC)</strong> để đảm bảo chỉ CloudFront mới có quyền truy cập vào S3, giúp bảo vệ dữ liệu khỏi truy cập trái phép.</li>
+<li>AWS cung cấp các tùy chọn bảo mật nâng cao như <strong>AWS WAF (Web Application Firewall)</strong> và <strong>Shield</strong> để bảo vệ website khỏi các tấn công DDoS.</li>
+</ul>
+<h3 id="dễ-dàng-quản-lý-và-tự-động-hóa">Dễ Dàng Quản Lý và Tự Động Hóa:</h3>
+<ul>
+<li>Cấu hình, triển khai, và quản lý website tĩnh rất đơn giản qua AWS Console hoặc bằng cách sử dụng <strong>Infrastructure as Code</strong> với AWS CloudFormation hoặc Terraform.</li>
+<li>AWS cung cấp tính năng tự động sao lưu và phục hồi, giúp đảm bảo tính liên tục của dịch vụ.</li>
+</ul>
+<h3 id="khả-năng-kết-hợp-với-các-dịch-vụ-aws-khác">Khả Năng Kết Hợp với Các Dịch Vụ AWS Khác:</h3>
+<ul>
+<li>Dễ dàng tích hợp với <strong>AWS Lambda</strong>, <strong>API Gateway</strong>, hoặc <strong>AWS Amplify</strong> để tạo nên ứng dụng web phức tạp hơn từ nền tảng tĩnh.</li>
+<li>Có thể sử dụng <strong>AWS IAM</strong> để quản lý quyền truy cập, cung cấp thêm mức độ kiểm soát bảo mật.</li>
+</ul>
+<h2 id="lợi-ích-của-việc-sử-dụng-s3-và-cloudfront">Lợi ích của việc sử dụng S3 và CloudFront:</h2>
+<ul>
+<li><strong>Tốc Độ Phản Hồi Nhanh Hơn</strong>: Nội dung được phân phối từ các edge location gần người dùng nhất thông qua CloudFront, giảm thời gian tải trang.</li>
+<li><strong>Bảo Mật Dữ Liệu và Quyền Truy Cập</strong>: Các thiết lập bảo mật giúp kiểm soát tốt hơn ai có thể truy cập vào nội dung.</li>
+<li><strong>Độ Tin Cậy Cao</strong>: Dịch vụ của AWS có SLA cao, đảm bảo tính sẵn sàng của website.</li>
+<li><strong>Tối Ưu SEO và Trải Nghiệm Người Dùng</strong>: Tốc độ tải trang nhanh giúp cải thiện xếp hạng SEO và trải nghiệm tổng thể cho người dùng.</li>
+<li><strong>Không Cần Bảo Trì Phức Tạp</strong>: Không phải lo lắng về việc bảo trì máy chủ hay cập nhật phần mềm định kỳ, giảm tải công việc cho đội ngũ phát triển.</li>
+</ul>
+<p>Việc triển khai website tĩnh bằng S3 và CloudFront không chỉ đơn giản, tiết kiệm mà còn mang lại một trải nghiệm web nhanh, bảo mật và ổn định cho người dùng!</p>
+<h4 id="main-content">Main Content</h4>
 <ol>
-<li><a href="1-create-new-aws-account/">Tạo tài khoản AWS</a></li>
-<li><a href="2-mfa-setup-for-aws-user-(root)/">Thiết lập MFA cho tài khoản AWS (Root)</a></li>
-<li><a href="3-create-admin-user-and-group/">Tài khoản và Nhóm Admin</a></li>
-<li><a href="4-verify-new-account/">Hỗ trợ Xác thực Tài khoản</a></li>
+<li><a href="1-create-new-aws-account/">Creating a new AWS Account</a></li>
+<li><a href="2-MFA-Setup-For-AWS-User-(root)">Setting up MFA for the AWS Account root user</a></li>
+<li><a href="3-create-admin-user-and-group/">Creating an Administrator Accounts and Groups</a></li>
+<li><a href="4-verify-new-account/">Getting support for Account Authentication</a></li>
 </ol>
+<!-- raw HTML omitted -->
 	
   
         
@@ -524,88 +401,6 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -622,7 +417,7 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
 	 
 		
 		
-			<a class="nav nav-next" href="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-create-s3-bucket-upload-file/" title="Tạo và Cấu Hình S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -632,19 +427,19 @@ Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn �
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725120588"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725120588"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725120588"></script>
-    <script src="/js/jquery.sticky.js?1725120588"></script>
-    <script src="/js/featherlight.min.js?1725120588"></script>
-    <script src="/js/highlight.pack.js?1725120588"></script>
+    <script src="/js/clipboard.min.js?1725122611"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725122611"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725122611"></script>
+    <script src="/js/jquery.sticky.js?1725122611"></script>
+    <script src="/js/featherlight.min.js?1725122611"></script>
+    <script src="/js/highlight.pack.js?1725122611"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725120588"></script>
-    <script src="/js/learn.js?1725120588"></script>
-    <script src="/js/hugo-learn.js?1725120588"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725122611"></script>
+    <script src="/js/learn.js?1725122611"></script>
+    <script src="/js/hugo-learn.js?1725122611"></script>
 
-    <link href="/mermaid/mermaid.css?1725120588" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725120588"></script>
+    <link href="/mermaid/mermaid.css?1725122611" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725122611"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

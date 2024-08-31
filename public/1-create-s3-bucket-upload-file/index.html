@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: AWS Account Setup</title>
+    <title>Create and Configure the S3 Bucket :: AWS Account Setup</title>
 
     
     <link href="/css/nucleus.css?1725122611" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/1-create-s3-bucket-upload-file/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -83,8 +83,8 @@
   
     
     <li data-nav-id="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/1-create-s3-bucket-upload-file/">
@@ -187,7 +187,7 @@
                   
                     
                     
-                      <option id="en" value="/categories/" selected>English</option>
+                      <option id="en" value="/1-create-s3-bucket-upload-file/" selected>English</option>
                     
                   
               
@@ -201,7 +201,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/1-create-s3-bucket-upload-file/">Tiếng Việt</option>
                     
                   
               
@@ -287,7 +287,7 @@
             
           
           
-            <a href='/'>Host Static Website on S3 and CloudFront</a> > Categories
+            <a href='/'>Host Static Website on S3 and CloudFront</a> > Create and Configure the S3 Bucket
           
         
           
@@ -298,7 +298,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-create-and-configure-the-s3-bucket">Step 1: Create and Configure the S3 Bucket</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -314,7 +318,7 @@
           
             <h1>
               
-              Categories
+              Create and Configure the S3 Bucket
             </h1>
           
 
@@ -322,11 +326,38 @@
 
 
 
-
-
+	<p><strong>Content:</strong></p>
+<h1 id="deploying-a-static-website-using-amazon-s3-and-cloudfront">Deploying a Static Website Using Amazon S3 and CloudFront</h1>
+<p>Deploying a static website using Amazon S3 and CloudFront is a popular, quick, and cost-effective solution. Follow the steps below to get started:</p>
+<h2 id="step-1-create-and-configure-the-s3-bucket">Step 1: Create and Configure the S3 Bucket</h2>
+<ol>
+<li>
+<p><strong>Create an S3 Bucket</strong></p>
 <ul>
-	
+<li>Go to the AWS Management Console and select S3.</li>
+<li>Click “Create bucket.”</li>
+<li>Name your bucket (e.g., <code>your-bucket-name</code>) and choose the appropriate region.</li>
+<li>Disable the “Block all public access” option to allow public access to the bucket (or use CloudFront to restrict access).</li>
 </ul>
+</li>
+<li>
+<p><strong>Upload Website Files</strong></p>
+<ul>
+<li>After creating the bucket, go into the bucket and upload your HTML, CSS, JavaScript, images, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure the Bucket as a Static Website</strong></p>
+<ul>
+<li>In the bucket, go to “Properties.”</li>
+<li>Find the “Static website hosting” section and enable it.</li>
+<li>Choose “Use this bucket to host a website” and specify the index document (e.g., <code>index.html</code>) and error document (e.g., <code>404.html</code>).</li>
+</ul>
+</li>
+</ol>
+
+
+
 
 
 <footer class=" footline" >
@@ -364,8 +395,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -382,6 +411,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -419,8 +451,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/" title="Host Static Website on S3 and CloudFront"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/2-config-permission-s3-bucket/" title="Set Up Permissions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -1,44 +1,59 @@
 +++
-title = "Thiết lập Tài Khoản AWS"
+title = "Host Static Website on S3 and CloudFront"
 date = 2024
 weight = 1
 chapter = false
 +++
 
-# Tạo tài khoản AWS đầu tiên
+# Host Static Website on S3 and CloudFront
 
-#### Tổng quan
+## Tại sao cần triển khai Website Tĩnh bằng Amazon S3 và CloudFront?
 
-Trong bài lab đầu tiên này, bạn sẽ tạo mới **tài khoản AWS** đầu tiên của mình, tạo **MFA** (Multi-factor Authentication) để gia tăng bảo mật tài khoản của bạn. Bước tiếp theo bạn sẽ tạo **Admin Group**, **Admin User** để quản lý quyền truy cập vào các tài nguyên trong tài khoản của mình thay vì sử dụng user root.\
-Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn đề, bạn sẽ được hướng dẫn hỗ trợ xác thực tài khoản với **AWS Support**.
+### Hiệu suất và Tốc độ Tải Trang Cao:
 
-#### Tài khoản AWS (AWS Account)
+- **S3** lưu trữ tệp tĩnh (HTML, CSS, JS) trên nền tảng đám mây với khả năng mở rộng tự động và truy cập nhanh chóng.
+- **CloudFront** là một Content Delivery Network (CDN) giúp phân phối nội dung tới người dùng từ các máy chủ gần nhất, giảm độ trễ và tăng tốc độ tải trang.
 
-**Tài khoản AWS** là phương tiện để bạn có thể truy cập và sử dụng những tài nguyên và dịch vụ của AWS. Theo mặc định, mỗi tài khoản AWS sẽ có một _root user_. _Root user_ có toàn quyền với tài khoản AWS của bạn, và quyền hạn của root user không thể bị giới hạn. Nếu bạn mới sử dụng tài khoản AWS lần đầu tiên, bạn sẽ truy cập vào tài khoản dưới danh nghĩa của _root user_.
+### Tiết Kiệm Chi Phí:
 
-{{% notice note %}}
-Chính vì quyền hạn của **root user** không thể bị giới hạn, AWS khuyên bạn không nên sử dụng trực tiếp _root user_ cho bất kỳ công tác nào. Thay vào đó, bạn nên tạo ra một _IAM User_ và trao quyền quản trị cho _IAM User_ đó để dễ dàng quản lý và giảm thiểu rủi ro.
-{{% /notice %}}
+- Triển khai website tĩnh trên **S3** có chi phí thấp, chỉ tính phí dựa trên dung lượng lưu trữ và băng thông sử dụng, không yêu cầu quản lý máy chủ phức tạp.
+- **CloudFront** giúp tối ưu hóa băng thông bằng cách lưu trữ nội dung cache gần người dùng, giảm số lần truy cập trực tiếp vào S3, từ đó giảm chi phí.
 
-#### MFA (Multi-factor Authentication)
+### Khả Năng Mở Rộng Vượt Trội:
 
-**MFA** là một tính năng được sử dụng để gia tăng bảo mật của tài khoản AWS. Nếu MFA được kích hoạt, bạn sẽ phải nhập mã OTP (One-time Password) mỗi lần bạn đăng nhập vào tài khoản AWS.
+- **S3** và **CloudFront** tự động xử lý lưu lượng truy cập lớn mà không cần cấu hình phức tạp, phù hợp với các website có nhu cầu tăng trưởng nhanh.
+- Không cần lo lắng về việc quá tải máy chủ khi có nhiều người truy cập cùng lúc.
 
-#### IAM Group
+### Bảo Mật Nâng Cao:
 
-**IAM Group** là một công cụ quản lý người dùng (_IAM User_) của AWS. Một IAM Group có thể chứa nhiều IAM User. Các IAM User ở trong một IAM Group đều hưởng chung quyền hạn mà IAM Group đó được gán cho.
+- **CloudFront** cho phép thiết lập HTTPS, bảo vệ dữ liệu khi truyền qua mạng.
+- Sử dụng **Origin Access Control (OAC)** để đảm bảo chỉ CloudFront mới có quyền truy cập vào S3, giúp bảo vệ dữ liệu khỏi truy cập trái phép.
+- AWS cung cấp các tùy chọn bảo mật nâng cao như **AWS WAF (Web Application Firewall)** và **Shield** để bảo vệ website khỏi các tấn công DDoS.
 
-#### IAM User
+### Dễ Dàng Quản Lý và Tự Động Hóa:
 
-**IAM User** là một đơn vị người dùng của AWS. Khi bạn đăng nhập vào AWS, bạn sẽ phải đăng nhập dưới danh nghĩa của một IAM User. Nếu bạn mới đăng nhập vào AWS lần đầu tiên, bạn sẽ đăng nhập dưới danh nghĩa của _root user_ (tạm dịch là người dùng gốc). Ngoài _root user_ ra, bạn có thể tạo ra nhiều IAM User khác để cho phép người khác truy cập **dài hạn** vào tài nguyên AWS trong tài khoản AWS của bạn.
+- Cấu hình, triển khai, và quản lý website tĩnh rất đơn giản qua AWS Console hoặc bằng cách sử dụng **Infrastructure as Code** với AWS CloudFormation hoặc Terraform.
+- AWS cung cấp tính năng tự động sao lưu và phục hồi, giúp đảm bảo tính liên tục của dịch vụ.
 
-#### AWS Support
+### Khả Năng Kết Hợp với Các Dịch Vụ AWS Khác:
 
-**AWS Support** là một đơn vị cung cấp các dịch vụ hỗ trợ khách hàng của AWS.
+- Dễ dàng tích hợp với **AWS Lambda**, **API Gateway**, hoặc **AWS Amplify** để tạo nên ứng dụng web phức tạp hơn từ nền tảng tĩnh.
+- Có thể sử dụng **AWS IAM** để quản lý quyền truy cập, cung cấp thêm mức độ kiểm soát bảo mật.
 
-#### Nội dung chính
+## Lợi ích của việc sử dụng S3 và CloudFront:
 
-1. [Tạo tài khoản AWS](1-create-new-aws-account/)
-2. [Thiết lập MFA cho tài khoản AWS (Root)](<2-mfa-setup-for-aws-user-(root)/>)
-3. [Tài khoản và Nhóm Admin](3-create-admin-user-and-group/)
-4. [Hỗ trợ Xác thực Tài khoản](4-verify-new-account/)
+- **Tốc Độ Phản Hồi Nhanh Hơn**: Nội dung được phân phối từ các edge location gần người dùng nhất thông qua CloudFront, giảm thời gian tải trang.
+- **Bảo Mật Dữ Liệu và Quyền Truy Cập**: Các thiết lập bảo mật giúp kiểm soát tốt hơn ai có thể truy cập vào nội dung.
+- **Độ Tin Cậy Cao**: Dịch vụ của AWS có SLA cao, đảm bảo tính sẵn sàng của website.
+- **Tối Ưu SEO và Trải Nghiệm Người Dùng**: Tốc độ tải trang nhanh giúp cải thiện xếp hạng SEO và trải nghiệm tổng thể cho người dùng.
+- **Không Cần Bảo Trì Phức Tạp**: Không phải lo lắng về việc bảo trì máy chủ hay cập nhật phần mềm định kỳ, giảm tải công việc cho đội ngũ phát triển.
+
+Việc triển khai website tĩnh bằng S3 và CloudFront không chỉ đơn giản, tiết kiệm mà còn mang lại một trải nghiệm web nhanh, bảo mật và ổn định cho người dùng!
+
+#### Main Content
+
+1. [Creating a new AWS Account](1-create-new-aws-account/)
+2. [Setting up MFA for the AWS Account root user](<2-MFA-Setup-For-AWS-User-(root)>)
+3. [Creating an Administrator Accounts and Groups](3-create-admin-user-and-group/)
+4. [Getting support for Account Authentication](4-verify-new-account/)
+<!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->

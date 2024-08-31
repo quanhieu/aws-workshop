@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="vi" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: AWS Account Setup</title>
+    <title>Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung :: Thiết lập AWS Account</title>
 
     
     <link href="/css/nucleus.css?1725122611" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/vi/3-create-cloudfront-distribution/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -61,7 +61,7 @@
 <script type="text/javascript" src="/js/auto-complete.js?1725122611"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/vi";
     
 </script>
 <script type="text/javascript" src="/js/search.js?1725122611"></script>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" class="dd-item 
+    <li data-nav-id="/vi/1-create-s3-bucket-upload-file/" title="Tạo và Cấu Hình S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/1-create-s3-bucket-upload-file/">
-          <b>1. </b>Create and Configure the S3 Bucket
+      <a href="/vi/1-create-s3-bucket-upload-file/">
+          <b>1. </b>Tạo và Cấu Hình S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-config-permission-s3-bucket/" title="Set Up Permissions" class="dd-item 
+    <li data-nav-id="/vi/2-config-permission-s3-bucket/" title="Thiết Lập Quyền Truy Cập" class="dd-item 
         
         
         
         ">
-      <a href="/2-config-permission-s3-bucket/">
-          <b>2. </b>Set Up Permissions
+      <a href="/vi/2-config-permission-s3-bucket/">
+          <b>2. </b>Thiết Lập Quyền Truy Cập
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,13 +134,13 @@
  
   
     
-    <li data-nav-id="/3-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" class="dd-item 
-        
-        
+    <li data-nav-id="/vi/3-create-cloudfront-distribution/" title="Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung" class="dd-item 
+        parent
+        active
         
         ">
-      <a href="/3-create-cloudfront-distribution/">
-          <b>3. </b>Set Up CloudFront to Speed Up Content Delivery
+      <a href="/vi/3-create-cloudfront-distribution/">
+          <b>3. </b>Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung
           
             <i class="fas fa-check read-icon"></i>
           
@@ -187,7 +187,7 @@
                   
                     
                     
-                      <option id="en" value="/categories/" selected>English</option>
+                      <option id="en" value="/3-create-cloudfront-distribution/">English</option>
                     
                   
               
@@ -201,7 +201,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-create-cloudfront-distribution/" selected>Tiếng Việt</option>
                     
                   
               
@@ -287,7 +287,7 @@
             
           
           
-            <a href='/'>Host Static Website on S3 and CloudFront</a> > Categories
+            <a href='/vi/'>Host Static Website on S3 and CloudFront</a> > Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung
           
         
           
@@ -298,7 +298,13 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bước-3-thiết-lập-cloudfront-để-tăng-tốc-độ-phân-phối-nội-dung">Bước 3: Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung</a></li>
+    <li><a href="#bước-4-cập-nhật-dns-với-route-53-nếu-sử-dụng-tên-miền-tùy-chỉnh">Bước 4: Cập Nhật DNS với Route 53 (Nếu Sử Dụng Tên Miền Tùy Chỉnh)</a></li>
+    <li><a href="#bước-5-kiểm-tra-và-hoàn-thiện">Bước 5: Kiểm Tra và Hoàn Thiện</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -314,7 +320,7 @@
           
             <h1>
               
-              Categories
+              Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung
             </h1>
           
 
@@ -322,11 +328,42 @@
 
 
 
-
-
+	<p><strong>Nội dung:</strong></p>
+<h2 id="bước-3-thiết-lập-cloudfront-để-tăng-tốc-độ-phân-phối-nội-dung">Bước 3: Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung</h2>
+<ol>
+<li>
+<p><strong>Tạo CloudFront Distribution</strong></p>
 <ul>
-	
+<li>Truy cập CloudFront trong AWS Management Console, chọn “Create Distribution.”</li>
+<li>Trong phần “Origin”, chọn bucket S3 đã tạo ở trên làm nguồn gốc.</li>
+<li>Trong “Origin access,” chọn &ldquo;Origin Access Control (OAC)&rdquo; để bảo vệ bucket S3, chỉ cho phép truy cập từ CloudFront.</li>
+<li>Thiết lập các thông số khác như Cache Policy và Viewer Protocol Policy (HTTP và HTTPS).</li>
 </ul>
+</li>
+<li>
+<p><strong>Cấu Hình Các Thiết Lập Khác</strong></p>
+<ul>
+<li><strong>Default Root Object</strong>: Đặt <code>index.html</code> hoặc file mặc định của bạn.</li>
+<li><strong>Tên Miền Tùy Chỉnh</strong> (nếu có): Cấu hình tên miền tùy chỉnh bằng AWS Certificate Manager (ACM) để cấp chứng chỉ SSL miễn phí.</li>
+</ul>
+</li>
+</ol>
+<h2 id="bước-4-cập-nhật-dns-với-route-53-nếu-sử-dụng-tên-miền-tùy-chỉnh">Bước 4: Cập Nhật DNS với Route 53 (Nếu Sử Dụng Tên Miền Tùy Chỉnh)</h2>
+<ol>
+<li><strong>Cấu Hình Record Sets Trong Route 53</strong>
+<ul>
+<li>Trỏ tên miền đến CloudFront bằng cách thêm Record Set với loại là CNAME hoặc A (Alias).</li>
+</ul>
+</li>
+</ol>
+<h2 id="bước-5-kiểm-tra-và-hoàn-thiện">Bước 5: Kiểm Tra và Hoàn Thiện</h2>
+<ol>
+<li>Truy cập vào URL của CloudFront để đảm bảo website hoạt động bình thường.</li>
+<li>Kiểm tra tốc độ tải trang và đảm bảo mọi file được phân phối qua CloudFront.</li>
+</ol>
+
+
+
 
 
 <footer class=" footline" >
@@ -399,6 +436,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -419,8 +457,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/vi/2-config-permission-s3-bucket/" title="Thiết Lập Quyền Truy Cập"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/vi/1-create-s3-bucket-upload-file/" title="Tạo và Cấu Hình S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

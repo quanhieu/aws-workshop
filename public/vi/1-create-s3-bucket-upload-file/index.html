@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="vi" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: AWS Account Setup</title>
+    <title>Tạo và Cấu Hình S3 Bucket :: Thiết lập AWS Account</title>
 
     
     <link href="/css/nucleus.css?1725122611" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/vi/1-create-s3-bucket-upload-file/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -61,7 +61,7 @@
 <script type="text/javascript" src="/js/auto-complete.js?1725122611"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/vi";
     
 </script>
 <script type="text/javascript" src="/js/search.js?1725122611"></script>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" class="dd-item 
-        
-        
+    <li data-nav-id="/vi/1-create-s3-bucket-upload-file/" title="Tạo và Cấu Hình S3 Bucket" class="dd-item 
+        parent
+        active
         
         ">
-      <a href="/1-create-s3-bucket-upload-file/">
-          <b>1. </b>Create and Configure the S3 Bucket
+      <a href="/vi/1-create-s3-bucket-upload-file/">
+          <b>1. </b>Tạo và Cấu Hình S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-config-permission-s3-bucket/" title="Set Up Permissions" class="dd-item 
+    <li data-nav-id="/vi/2-config-permission-s3-bucket/" title="Thiết Lập Quyền Truy Cập" class="dd-item 
         
         
         
         ">
-      <a href="/2-config-permission-s3-bucket/">
-          <b>2. </b>Set Up Permissions
+      <a href="/vi/2-config-permission-s3-bucket/">
+          <b>2. </b>Thiết Lập Quyền Truy Cập
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,13 +134,13 @@
  
   
     
-    <li data-nav-id="/3-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" class="dd-item 
+    <li data-nav-id="/vi/3-create-cloudfront-distribution/" title="Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung" class="dd-item 
         
         
         
         ">
-      <a href="/3-create-cloudfront-distribution/">
-          <b>3. </b>Set Up CloudFront to Speed Up Content Delivery
+      <a href="/vi/3-create-cloudfront-distribution/">
+          <b>3. </b>Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung
           
             <i class="fas fa-check read-icon"></i>
           
@@ -187,7 +187,7 @@
                   
                     
                     
-                      <option id="en" value="/categories/" selected>English</option>
+                      <option id="en" value="/1-create-s3-bucket-upload-file/">English</option>
                     
                   
               
@@ -201,7 +201,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/1-create-s3-bucket-upload-file/" selected>Tiếng Việt</option>
                     
                   
               
@@ -287,7 +287,7 @@
             
           
           
-            <a href='/'>Host Static Website on S3 and CloudFront</a> > Categories
+            <a href='/vi/'>Host Static Website on S3 and CloudFront</a> > Tạo và Cấu Hình S3 Bucket
           
         
           
@@ -298,7 +298,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bước-1-tạo-và-cấu-hình-s3-bucket">Bước 1: Tạo và Cấu Hình S3 Bucket</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -314,7 +318,7 @@
           
             <h1>
               
-              Categories
+              Tạo và Cấu Hình S3 Bucket
             </h1>
           
 
@@ -322,11 +326,38 @@
 
 
 
-
-
+	<p><strong>Nội dung:</strong></p>
+<h1 id="triển-khai-website-tĩnh-bằng-amazon-s3-và-cloudfront">Triển khai Website Tĩnh bằng Amazon S3 và CloudFront</h1>
+<p>Triển khai một website tĩnh bằng Amazon S3 và CloudFront là một giải pháp phổ biến, nhanh chóng và tiết kiệm chi phí. Hãy làm theo các bước dưới đây để bắt đầu:</p>
+<h2 id="bước-1-tạo-và-cấu-hình-s3-bucket">Bước 1: Tạo và Cấu Hình S3 Bucket</h2>
+<ol>
+<li>
+<p><strong>Tạo S3 Bucket</strong></p>
 <ul>
-	
+<li>Truy cập vào AWS Management Console và chọn S3.</li>
+<li>Nhấp vào “Create bucket.”</li>
+<li>Đặt tên cho bucket (ví dụ: <code>ten-bucket-cua-ban</code>) và chọn khu vực phù hợp.</li>
+<li>Tắt tùy chọn “Block all public access” để cho phép truy cập công khai vào bucket (hoặc sử dụng CloudFront để giới hạn truy cập).</li>
 </ul>
+</li>
+<li>
+<p><strong>Tải lên Các File Của Website</strong></p>
+<ul>
+<li>Sau khi tạo bucket, vào bucket và tải lên các file HTML, CSS, JavaScript, hình ảnh, v.v.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cấu Hình Bucket Thành Website Tĩnh</strong></p>
+<ul>
+<li>Trong bucket, vào phần “Properties.”</li>
+<li>Tìm mục “Static website hosting” và bật nó lên.</li>
+<li>Chọn “Use this bucket to host a website” và chỉ định file index (ví dụ: <code>index.html</code>) và file lỗi (ví dụ: <code>404.html</code>).</li>
+</ul>
+</li>
+</ol>
+
+
+
 
 
 <footer class=" footline" >
@@ -364,8 +395,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -382,6 +411,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -419,8 +451,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/vi/" title="Host Static Website on S3 and CloudFront"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/vi/2-config-permission-s3-bucket/" title="Thiết Lập Quyền Truy Cập" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

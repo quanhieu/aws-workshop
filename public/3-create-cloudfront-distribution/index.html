@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: AWS Account Setup</title>
+    <title>Set Up CloudFront to Speed Up Content Delivery :: AWS Account Setup</title>
 
     
     <link href="/css/nucleus.css?1725122611" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/3-create-cloudfront-distribution/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -135,8 +135,8 @@
   
     
     <li data-nav-id="/3-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/3-create-cloudfront-distribution/">
@@ -187,7 +187,7 @@
                   
                     
                     
-                      <option id="en" value="/categories/" selected>English</option>
+                      <option id="en" value="/3-create-cloudfront-distribution/" selected>English</option>
                     
                   
               
@@ -201,7 +201,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-create-cloudfront-distribution/">Tiếng Việt</option>
                     
                   
               
@@ -287,7 +287,7 @@
             
           
           
-            <a href='/'>Host Static Website on S3 and CloudFront</a> > Categories
+            <a href='/'>Host Static Website on S3 and CloudFront</a> > Set Up CloudFront to Speed Up Content Delivery
           
         
           
@@ -298,7 +298,13 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-3-set-up-cloudfront-to-speed-up-content-delivery">Step 3: Set Up CloudFront to Speed Up Content Delivery</a></li>
+    <li><a href="#step-4-update-dns-with-route-53-if-using-a-custom-domain">Step 4: Update DNS with Route 53 (If Using a Custom Domain)</a></li>
+    <li><a href="#step-5-test-and-finalize">Step 5: Test and Finalize</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -314,7 +320,7 @@
           
             <h1>
               
-              Categories
+              Set Up CloudFront to Speed Up Content Delivery
             </h1>
           
 
@@ -322,11 +328,42 @@
 
 
 
-
-
+	<p><strong>Content:</strong></p>
+<h2 id="step-3-set-up-cloudfront-to-speed-up-content-delivery">Step 3: Set Up CloudFront to Speed Up Content Delivery</h2>
+<ol>
+<li>
+<p><strong>Create a CloudFront Distribution</strong></p>
 <ul>
-	
+<li>Go to CloudFront in the AWS Management Console, select “Create Distribution.”</li>
+<li>In the “Origin” section, select the S3 bucket created earlier as the origin source.</li>
+<li>In “Origin access,” select &ldquo;Origin Access Control (OAC)&rdquo; to protect the S3 bucket, allowing access only from CloudFront.</li>
+<li>Set other parameters such as Cache Policy and Viewer Protocol Policy (HTTP and HTTPS).</li>
 </ul>
+</li>
+<li>
+<p><strong>Configure Other Settings</strong></p>
+<ul>
+<li><strong>Default Root Object</strong>: Set to <code>index.html</code> or your default file.</li>
+<li><strong>Custom Domain</strong> (if applicable): Set up a custom domain by using AWS Certificate Manager (ACM) to issue a free SSL certificate.</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-4-update-dns-with-route-53-if-using-a-custom-domain">Step 4: Update DNS with Route 53 (If Using a Custom Domain)</h2>
+<ol>
+<li><strong>Configure Record Sets in Route 53</strong>
+<ul>
+<li>Point your domain to CloudFront by adding a Record Set with type CNAME or A (Alias).</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-5-test-and-finalize">Step 5: Test and Finalize</h2>
+<ol>
+<li>Access the CloudFront URL to ensure the website is working properly.</li>
+<li>Check page load speed and ensure all files are being distributed through CloudFront.</li>
+</ol>
+
+
+
 
 
 <footer class=" footline" >
@@ -399,6 +436,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -418,6 +456,8 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/2-config-permission-s3-bucket/" title="Set Up Permissions"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>

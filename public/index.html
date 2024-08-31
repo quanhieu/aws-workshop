@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Setting up an AWS account :: AWS Account Setup</title>
+    <title>Host Static Website on S3 and CloudFront :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1725120588" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725120588" rel="stylesheet">
-    <link href="/css/hybrid.css?1725120588" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725120588" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725120588" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725120588" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725120588" rel="stylesheet">
-    <link href="/css/theme.css?1725120588" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725120588" rel="stylesheet">
+    <link href="/css/nucleus.css?1725122611" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725122611" rel="stylesheet">
+    <link href="/css/hybrid.css?1725122611" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725122611" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725122611" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725122611" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725122611" rel="stylesheet">
+    <link href="/css/theme.css?1725122611" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725122611" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725120588" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725122611" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725120588"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725122611"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725120588"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725120588"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725122611"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725122611"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725120588"></script>
+<script type="text/javascript" src="/js/search.js?1725122611"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-create-new-aws-account/" title="Creating a new AWS account" class="dd-item 
+    <li data-nav-id="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/1-create-new-aws-account/">
-          <b>1. </b>Creating a new AWS account
+      <a href="/1-create-s3-bucket-upload-file/">
+          <b>1. </b>Create and Configure the S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/5-test-hugo/" title="Creating a new AWS account" class="dd-item 
+    <li data-nav-id="/2-config-permission-s3-bucket/" title="Set Up Permissions" class="dd-item 
         
         
         
         ">
-      <a href="/5-test-hugo/">
-          <b>1. </b>Creating a new AWS account
+      <a href="/2-config-permission-s3-bucket/">
+          <b>2. </b>Set Up Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,161 +134,13 @@
  
   
     
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/" title="MFA for AWS Accounts" class="dd-item 
+    <li data-nav-id="/3-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" class="dd-item 
         
         
         
         ">
-      <a href="/2-mfa-setup-for-aws-user-root/">
-          <b>2. </b>MFA for AWS Accounts
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Virtual MFA Devices" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Virtual MFA Devices
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="U2F Security Key" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>U2F Security Key
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Hardware MFA Device" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Hardware MFA Device
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-create-admin-user-and-group/" title="Creating an Administrator Group and Admin User" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-create-admin-user-and-group/">
-          <b>3. </b>Creating an Administrator Group and Admin User
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-verify-new-account/" title="Getting Support for Account Authentication" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-verify-new-account/">
-          <b>4. </b>Getting Support for Account Authentication
+      <a href="/3-create-cloudfront-distribution/">
+          <b>3. </b>Set Up CloudFront to Speed Up Content Delivery
           
             <i class="fas fa-check read-icon"></i>
           
@@ -426,32 +278,53 @@
 </span>
 
  
-<h1 id="creating-your-first-aws-account">Creating your first AWS account</h1>
-<h4 id="overview">Overview</h4>
-<p>In this first lab, you will be creating your new <strong>AWS</strong> account and use Multi-factor Authentication (<strong>MFA</strong>) to improve your account security. Next, you will create an <strong>Administrator Group</strong> and <strong>Admin User</strong> to manage access to resources in your account instead of using the root user.<br>
-Finally, we will step through account authentication with <strong>AWS Support</strong> in the event you experience authentication problems.</p>
-<h4 id="aws-account">AWS Account</h4>
-<p><strong>An AWS account</strong> is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a <em>root user</em>. The <em>root user</em> has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the <em>root user</em>.</p>
-
-<div class="notices note" ><p>As a best practice, do not use the AWS account <em>root user</em> for any task where it&rsquo;s not required. Instead, create a new IAM user for each person that requires administrator access. Thereafter, the users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interaction should be through the AWS account&rsquo;s users and their own keys instead of the root user. However, to perform some account and service management tasks, you must log in using the root user credentials.</p>
-</div>
-
-<h4 id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h4>
-<p><strong>MFA</strong> adds extra security because it requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their regular sign-in credentials when they access AWS websites or services.</p>
-<h4 id="iam-user-group">IAM User Group</h4>
-<p>An <strong>IAM user group</strong> is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. Any user in that user group automatically has the permissions that are assigned to the user group.</p>
-<h4 id="iam-user">IAM User</h4>
-<p>An <strong>IAM user</strong> is an entity that you create in AWS to represent the person or application that uses it to interact with AWS. A user in AWS consists of a name and credentials.<br>
-Please note that an IAM user with administrator permissions is not the same thing as the AWS account root user.</p>
-<h4 id="aws-support">AWS Support</h4>
-<p>AWS Basic Support offers all AWS customers access to our Resource Center, Service Health Dashboard, Product FAQs, Discussion Forums, and Support for Health Checks – at no additional charge. Customers who desire a deeper level of support can subscribe to AWS Support at the Developer, Business, or Enterprise level.</p>
-<p>Customers who choose AWS Support gain one-on-one, fast-response support from AWS engineers. The service helps customers use AWS&rsquo;s products and features. With pay-by-the-month pricing and unlimited support cases, customers are freed from long-term commitments. Customers with operational issues or technical questions can contact a team of support engineers and receive predictable response times and personalized support.</p>
+<h1 id="host-static-website-on-s3-and-cloudfront">Host Static Website on S3 and CloudFront</h1>
+<h2 id="why-deploy-a-static-website-using-amazon-s3-and-cloudfront">Why Deploy a Static Website Using Amazon S3 and CloudFront?</h2>
+<h3 id="high-performance-and-page-load-speed">High Performance and Page Load Speed:</h3>
+<ul>
+<li><strong>S3</strong> stores static files (HTML, CSS, JS) on the cloud platform with automatic scaling and quick access.</li>
+<li><strong>CloudFront</strong> is a Content Delivery Network (CDN) that helps distribute content to users from the nearest servers, reducing latency and increasing page load speed.</li>
+</ul>
+<h3 id="cost-savings">Cost Savings:</h3>
+<ul>
+<li>Deploying a static website on <strong>S3</strong> is cost-effective, charging only based on storage and bandwidth usage, with no complex server management required.</li>
+<li><strong>CloudFront</strong> optimizes bandwidth by caching content close to users, reducing direct access to S3 and thereby cutting costs.</li>
+</ul>
+<h3 id="superior-scalability">Superior Scalability:</h3>
+<ul>
+<li><strong>S3</strong> and <strong>CloudFront</strong> automatically handle high traffic without complex configurations, suitable for websites with rapid growth needs.</li>
+<li>No worries about server overload when many users access the site simultaneously.</li>
+</ul>
+<h3 id="enhanced-security">Enhanced Security:</h3>
+<ul>
+<li><strong>CloudFront</strong> allows HTTPS setup, protecting data during transmission.</li>
+<li>Use <strong>Origin Access Control (OAC)</strong> to ensure only CloudFront has access to S3, protecting data from unauthorized access.</li>
+<li>AWS provides advanced security options like <strong>AWS WAF (Web Application Firewall)</strong> and <strong>Shield</strong> to protect websites from DDoS attacks.</li>
+</ul>
+<h3 id="easy-management-and-automation">Easy Management and Automation:</h3>
+<ul>
+<li>Configuring, deploying, and managing a static website is straightforward via AWS Console or by using <strong>Infrastructure as Code</strong> with AWS CloudFormation or Terraform.</li>
+<li>AWS offers automatic backup and recovery features, ensuring service continuity.</li>
+</ul>
+<h3 id="integration-with-other-aws-services">Integration with Other AWS Services:</h3>
+<ul>
+<li>Easily integrate with <strong>AWS Lambda</strong>, <strong>API Gateway</strong>, or <strong>AWS Amplify</strong> to create more complex web applications from a static base.</li>
+<li><strong>AWS IAM</strong> can be used to manage access permissions, providing additional security control.</li>
+</ul>
+<h2 id="benefits-of-using-s3-and-cloudfront">Benefits of Using S3 and CloudFront:</h2>
+<ul>
+<li><strong>Faster Response Time</strong>: Content is distributed from the nearest edge locations to users through CloudFront, reducing page load time.</li>
+<li><strong>Data Security and Access Control</strong>: Security settings help better control who can access your content.</li>
+<li><strong>High Reliability</strong>: AWS services have a high SLA, ensuring website availability.</li>
+<li><strong>SEO Optimization and User Experience</strong>: Fast page load speeds improve SEO rankings and overall user experience.</li>
+<li><strong>No Complex Maintenance Required</strong>: No worries about server maintenance or regular software updates, reducing workload for the development team.</li>
+</ul>
+<p>Deploying a static website using S3 and CloudFront is simple, cost-effective, and provides a fast, secure, and stable web experience for users!</p>
 <h4 id="main-content">Main Content</h4>
 <ol>
-<li><a href="1-create-new-aws-account/">Creating a new AWS Account</a></li>
-<li><a href="2-MFA-Setup-For-AWS-User-(root)">Setting up MFA for the AWS Account root user</a></li>
-<li><a href="3-create-admin-user-and-group/">Creating an Administrator Accounts and Groups</a></li>
-<li><a href="4-verify-new-account/">Getting support for Account Authentication</a></li>
+<li><a href="1-Create-s3-bucket-upload-file/">Create and Configure the S3 Bucket</a></li>
+<li><a href="2-Config-permission-s3-bucket/">Config permission S3 bucket</a></li>
+<li><a href="3-Create-cloudFront-distribution/">Create CloudFront Distribution</a></li>
 </ol>
 <!-- raw HTML omitted -->
 	
@@ -527,88 +400,6 @@ Please note that an IAM user with administrator permissions is not the same thin
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -625,7 +416,7 @@ Please note that an IAM user with administrator permissions is not the same thin
 	 
 		
 		
-			<a class="nav nav-next" href="/1-create-new-aws-account/" title="Creating a new AWS account" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -635,19 +426,19 @@ Please note that an IAM user with administrator permissions is not the same thin
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725120588"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725120588"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725120588"></script>
-    <script src="/js/jquery.sticky.js?1725120588"></script>
-    <script src="/js/featherlight.min.js?1725120588"></script>
-    <script src="/js/highlight.pack.js?1725120588"></script>
+    <script src="/js/clipboard.min.js?1725122611"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725122611"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725122611"></script>
+    <script src="/js/jquery.sticky.js?1725122611"></script>
+    <script src="/js/featherlight.min.js?1725122611"></script>
+    <script src="/js/highlight.pack.js?1725122611"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725120588"></script>
-    <script src="/js/learn.js?1725120588"></script>
-    <script src="/js/hugo-learn.js?1725120588"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725122611"></script>
+    <script src="/js/learn.js?1725122611"></script>
+    <script src="/js/hugo-learn.js?1725122611"></script>
 
-    <link href="/mermaid/mermaid.css?1725120588" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725120588"></script>
+    <link href="/mermaid/mermaid.css?1725122611" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725122611"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
