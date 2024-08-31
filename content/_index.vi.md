@@ -52,8 +52,7 @@ Việc triển khai website tĩnh bằng S3 và CloudFront không chỉ đơn gi
 
 #### Main Content
 
-1. [Creating a new AWS Account](1-create-new-aws-account/)
-2. [Setting up MFA for the AWS Account root user](<2-MFA-Setup-For-AWS-User-(root)>)
-3. [Creating an Administrator Accounts and Groups](3-create-admin-user-and-group/)
-4. [Getting support for Account Authentication](4-verify-new-account/)
+1. [Tạo và Cấu Hình S3 Bucket](1-Create-s3-bucket-upload-file/)
+2. [Thiết Lập Quyền Truy Cập](2-Config-permission-s3-bucket/)
+3. [Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung](3-Create-cloudFront-distribution/)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
