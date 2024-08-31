@@ -8,7 +8,7 @@ pre = "<b>1. </b>"
 
 **Content:**
 
-# Deploying a Static Website Using Amazon S3 and CloudFront
+## Deploying a Static Website Using Amazon S3 and CloudFront
 
 Deploying a static website using Amazon S3 and CloudFront is a popular, quick, and cost-effective solution. Follow the steps below to get started:
 

@@ -8,7 +8,7 @@ pre = "<b>1. </b>"
 
 **Nội dung:**
 
-# Triển khai Website Tĩnh bằng Amazon S3 và CloudFront
+<!-- # Triển khai Website Tĩnh bằng Amazon S3 và CloudFront -->
 
 Triển khai một website tĩnh bằng Amazon S3 và CloudFront là một giải pháp phổ biến, nhanh chóng và tiết kiệm chi phí. Hãy làm theo các bước dưới đây để bắt đầu:
 
