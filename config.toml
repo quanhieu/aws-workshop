@@ -1,5 +1,6 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
+baseURL = "/"
 
 # For search functionality
 [outputs]
@@ -11,14 +12,14 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "journeyoftheaverageguy@gmail.com"
+  author = "hieutq1188@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
   
 [Languages]
 [Languages.en]
-title = "AWS Account Setup"
+title = "Host Static Website on S3 and CloudFront"
 weight = 1
 languageName = "English"
 
@@ -29,7 +30,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "Thiết lập AWS Account"
+title = "Triển khai Static Website trên S3 và CloudFront"
 weight = 2
 languageName = "Tiếng Việt"
 

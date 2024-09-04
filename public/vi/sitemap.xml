@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/vi/1-create-s3-bucket-upload-file/</loc>
+    <loc>/vi/1-prepare-source-code/</loc>
     <lastmod>2024-08-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-s3-bucket-upload-file/"
+                href="/1-prepare-source-code/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-s3-bucket-upload-file/"
+                href="/vi/1-prepare-source-code/"
                 />
   </url>
   
@@ -33,32 +33,47 @@
   </url>
   
   <url>
-    <loc>/vi/2-config-permission-s3-bucket/</loc>
-    <lastmod>2024-05-14T00:38:32+07:00</lastmod>
+    <loc>/vi/2-create-s3-bucket-upload-file/</loc>
+    <lastmod>2024-08-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-config-permission-s3-bucket/"
+                href="/2-create-s3-bucket-upload-file/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-config-permission-s3-bucket/"
+                href="/vi/2-create-s3-bucket-upload-file/"
                 />
   </url>
   
   <url>
-    <loc>/vi/3-create-cloudfront-distribution/</loc>
+    <loc>/vi/3-config-permission-s3-bucket/</loc>
     <lastmod>2024-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-create-cloudfront-distribution/"
+                href="/3-config-permission-s3-bucket/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-create-cloudfront-distribution/"
+                href="/vi/3-config-permission-s3-bucket/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/4-create-cloudfront-distribution/</loc>
+    <lastmod>2024-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-create-cloudfront-distribution/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-create-cloudfront-distribution/"
                 />
   </url>
   

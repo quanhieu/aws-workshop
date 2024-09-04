@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create and Configure the S3 Bucket on Host Static Website on S3 and CloudFront</title>
+    <link>/2-create-s3-bucket-upload-file/</link>
+    <description>Recent content in Create and Configure the S3 Bucket on Host Static Website on S3 and CloudFront</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Aug 2024 00:38:32 +0700</lastBuildDate>
+    
+	<atom:link href="/2-create-s3-bucket-upload-file/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
