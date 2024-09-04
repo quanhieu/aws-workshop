@@ -14,25 +14,25 @@ pre = "<b>2. </b>"
    - Nhấp vào “Create bucket.”
    - Đặt tên cho bucket (ví dụ: `ten-bucket-cua-ban`) và chọn khu vực phù hợp.
 
-   ![Step 1](./images/2-s3-static/1.step.png)
+   ![Step 1](../../images/2-s3-static/1.step.png)
 
    - Tắt tùy chọn “Block all public access” để cho phép truy cập công khai vào bucket (hoặc sử dụng CloudFront để giới hạn truy cập).
 
-   ![Step 2](./images/2-s3-static/2.step.png)
+   ![Step 2](../../images/2-s3-static/2.step.png)
 
 2. **Tải lên Các File Của Website**
 
    - Sau khi tạo bucket, vào bucket và tải lên các file HTML, CSS, JavaScript, hình ảnh, v.v.
 
-   ![Step 3](./images/2-s3-static/4.step.png)
+   ![Step 3](../../images/2-s3-static/4.step.png)
 
 3. **Cấu Hình Bucket Thành Website Tĩnh**
 
    - Trong bucket, vào phần “Properties.”
    - Tìm mục “Static website hosting” và bật nó lên.
 
-   ![Step 5](./images/2-s3-static/5.step.png)
+   ![Step 5](../../images/2-s3-static/5.step.png)
 
    - Chọn “Use this bucket to host a website” và chỉ định file index (ví dụ: `index.html`) và file lỗi (ví dụ: `404.html`).
 
-   ![Step 6](./images/2-s3-static/6.step.png)
+   ![Step 6](../../images/2-s3-static/6.step.png)

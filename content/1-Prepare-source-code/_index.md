@@ -20,7 +20,7 @@ Deploying a static website using Amazon S3 and CloudFront is a popular, quick, a
 
     ```
 
-    ![Step 1](./images/1-prepare-nextjs/1.step.png)
+    ![Step 1](../images/1-prepare-nextjs/1.step.png)
 
 2.  **Test source**
 
@@ -30,11 +30,11 @@ Deploying a static website using Amazon S3 and CloudFront is a popular, quick, a
      yarn dev
     ```
 
-    ![Step 2](./images/1-prepare-nextjs/2.step.png)
+    ![Step 2](../images/1-prepare-nextjs/2.step.png)
 
 - Check `https://localhost:3000`
 
-  ![Step 3](./images/1-prepare-nextjs/3.step.png)
+  ![Step 3](../images/1-prepare-nextjs/3.step.png)
 
 3. **Build source**
 
@@ -44,4 +44,4 @@ Deploying a static website using Amazon S3 and CloudFront is a popular, quick, a
     yarn build
    ```
 
-   ![Step 4](./images/1-prepare-nextjs/4.step.png)
+   ![Step 4](../images/1-prepare-nextjs/4.step.png)

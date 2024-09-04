@@ -14,25 +14,25 @@ pre = "<b>2. </b>"
    - Click “Create bucket.”
    - Name your bucket (e.g., `your-bucket-name`) and choose the appropriate region.
 
-   ![Step 1](./images/2-s3-static/1.step.png)
+   ![Step 1](../images/2-s3-static/1.step.png)
 
    - Disable the “Block all public access” option to allow public access to the bucket (or use CloudFront to restrict access).
 
-   ![Step 2](./images/2-s3-static/2.step.png)
+   ![Step 2](../images/2-s3-static/2.step.png)
 
 2. **Upload Website Files**
 
    - After creating the bucket, go into the bucket and upload your HTML, CSS, JavaScript, images, etc.
 
-   ![Step 3](./images/2-s3-static/4.step.png)
+   ![Step 3](../images/2-s3-static/4.step.png)
 
 3. **Configure the Bucket as a Static Website**
 
    - In the bucket, go to “Properties.”
    - Find the “Static website hosting” section and enable it.
 
-   ![Step 5](./images/2-s3-static/5.step.png)
+   ![Step 5](../images/2-s3-static/5.step.png)
 
    - Choose “Use this bucket to host a website” and specify the index document (e.g., `index.html`) and error document (e.g., `404.html`).
 
-   ![Step 6](./images/2-s3-static/6.step.png)
+   ![Step 6](../images/2-s3-static/6.step.png)
