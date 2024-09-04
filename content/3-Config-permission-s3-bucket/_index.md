@@ -29,13 +29,13 @@ pre = "<b>3. </b>"
      }
      ```
 
-     ![Step 7](./images/2-s3-static/7.step.png)
+     ![Step 7](../images/2-s3-static/7.step.png)
 
 2. **Verify Permissions**
 
    - Ensure the files in the bucket can be accessed publicly via direct URLs.
 
-     ![Step 8](./images/2-s3-static/8.step.png)
+     ![Step 8](../images/2-s3-static/8.step.png)
 
    - Verify Url
-     ![Step 9](./images/2-s3-static/9.step.png)
+     ![Step 9](../images/2-s3-static/9.step.png)

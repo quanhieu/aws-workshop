@@ -12,21 +12,21 @@
     <title>Set Up CloudFront to Speed Up Content Delivery :: Host Static Website on S3 and CloudFront</title>
 
     
-    <link href="/css/nucleus.css?1725419403" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725419403" rel="stylesheet">
-    <link href="/css/hybrid.css?1725419403" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725419403" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725419403" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725419403" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725419403" rel="stylesheet">
-    <link href="/css/theme.css?1725419403" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725419403" rel="stylesheet">
+    <link href="/css/nucleus.css?1725422542" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725422542" rel="stylesheet">
+    <link href="/css/hybrid.css?1725422542" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725422542" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725422542" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725422542" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725422542" rel="stylesheet">
+    <link href="/css/theme.css?1725422542" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725422542" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725419403" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725422542" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725419403"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725422542"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725419403"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725419403"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725422542"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725422542"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725419403"></script>
+<script type="text/javascript" src="/js/search.js?1725422542"></script>
 
     
   </div>
@@ -365,15 +365,15 @@
 <ul>
 <li>
 <p>Choose &ldquo;Permission&rdquo; -&gt; Edit</p>
-<p><img src="./images/3-cloudfront-static/1.step.png" alt="Step 1"></p>
+<p><img src="../images/3-cloudfront-static/1.step.png" alt="Step 1"></p>
 </li>
 <li>
 <p>Enable the “Block all public access” option to allow public access to the bucket.</p>
-<p><img src="./images/3-cloudfront-static/2.step.png" alt="Step 2"></p>
+<p><img src="../images/3-cloudfront-static/2.step.png" alt="Step 2"></p>
 </li>
 <li>
 <p>Type &ldquo;confirm&rdquo; -&gt; Save</p>
-<p><img src="./images/3-cloudfront-static/3.step.png" alt="Step 3"></p>
+<p><img src="../images/3-cloudfront-static/3.step.png" alt="Step 3"></p>
 </li>
 </ul>
 </li>
@@ -385,19 +385,19 @@
 </li>
 <li>
 <p>In the “Origin” section, select the S3 bucket created earlier as the origin source.</p>
-<p><img src="./images/3-cloudfront-static/4.step.png" alt="Step 4"></p>
+<p><img src="../images/3-cloudfront-static/4.step.png" alt="Step 4"></p>
 </li>
 <li>
 <p>In “Origin access” select &ldquo;Origin Access Control Setting&rdquo; to protect the S3 bucket, allowing access only from CloudFront.</p>
-<p><img src="./images/3-cloudfront-static/5.step.png" alt="Step 5"></p>
+<p><img src="../images/3-cloudfront-static/5.step.png" alt="Step 5"></p>
 </li>
 <li>
 <p>Select an origin access control, if have not any select, create new OAC</p>
-<p><img src="./images/3-cloudfront-static/6.step.png" alt="Step 6"></p>
+<p><img src="../images/3-cloudfront-static/6.step.png" alt="Step 6"></p>
 </li>
 <li>
 <p>Select Web Application Firewall (WAF)</p>
-<p><img src="./images/3-cloudfront-static/7.step.png" alt="Step 7"></p>
+<p><img src="../images/3-cloudfront-static/7.step.png" alt="Step 7"></p>
 </li>
 </ul>
 <!-- raw HTML omitted -->
@@ -407,7 +407,7 @@
 <ul>
 <li>
 <p><strong>Default Root Object</strong>: Set to <code>index.html</code> or your default file.</p>
-<p><img src="./images/3-cloudfront-static/13.step.png" alt="Step 13"></p>
+<p><img src="../images/3-cloudfront-static/13.step.png" alt="Step 13"></p>
 </li>
 <li>
 <p><strong>Custom Domain</strong> (if applicable): Set up a custom domain by using AWS Certificate Manager (ACM) to issue a free SSL certificate.</p>
@@ -421,12 +421,12 @@
 <p><strong>Copy S3 policy</strong></p>
 <ul>
 <li>
-<p>Choose &ldquo;Origin&rdquo; -&gt; Select one and Choose Edit</p>
-<p><img src="./images/3-cloudfront-static/8.step.png" alt="Step 8"></p>
+<p>Choose &ldquo;Origins&rdquo; -&gt; Select first Origin and Choose Edit</p>
+<p><img src="../images/3-cloudfront-static/8.step.png" alt="Step 8"></p>
 </li>
 <li>
 <p>Choose Copy Policy</p>
-<p><img src="./images/3-cloudfront-static/9.step.png" alt="Step 9"></p>
+<p><img src="../images/3-cloudfront-static/9.step.png" alt="Step 9"></p>
 </li>
 </ul>
 </li>
@@ -438,11 +438,11 @@
 </li>
 <li>
 <p>Go to the “Permissions” tab &gt; “Bucket Policy”</p>
-<p><img src="./images/3-cloudfront-static/10.step.png" alt="Step 10"></p>
+<p><img src="../images/3-cloudfront-static/10.step.png" alt="Step 10"></p>
 </li>
 <li>
 <p>Edit -&gt; Ctrl + V to parse new bucket Policy</p>
-<p><img src="./images/3-cloudfront-static/11.step.png" alt="Step 11"></p>
+<p><img src="../images/3-cloudfront-static/11.step.png" alt="Step 11"></p>
 </li>
 </ul>
 </li>
@@ -454,11 +454,11 @@
 </li>
 <li>
 <p>Access the CloudFront URL to ensure the website is working properly.</p>
-<p><img src="./images/3-cloudfront-static/12.step.png" alt="Step 12"></p>
+<p><img src="../images/3-cloudfront-static/12.step.png" alt="Step 12"></p>
 </li>
 <li>
 <p>Check page load speed and ensure all files are being distributed through CloudFront</p>
-<p><img src="./images/3-cloudfront-static/15.step.png" alt="Step 15"></p>
+<p><img src="../images/3-cloudfront-static/15.step.png" alt="Step 15"></p>
 </li>
 </ul>
 </li>
@@ -588,19 +588,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725419403"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725419403"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725419403"></script>
-    <script src="/js/jquery.sticky.js?1725419403"></script>
-    <script src="/js/featherlight.min.js?1725419403"></script>
-    <script src="/js/highlight.pack.js?1725419403"></script>
+    <script src="/js/clipboard.min.js?1725422542"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725422542"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725422542"></script>
+    <script src="/js/jquery.sticky.js?1725422542"></script>
+    <script src="/js/featherlight.min.js?1725422542"></script>
+    <script src="/js/highlight.pack.js?1725422542"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725419403"></script>
-    <script src="/js/learn.js?1725419403"></script>
-    <script src="/js/hugo-learn.js?1725419403"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725422542"></script>
+    <script src="/js/learn.js?1725422542"></script>
+    <script src="/js/hugo-learn.js?1725422542"></script>
 
-    <link href="/mermaid/mermaid.css?1725419403" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725419403"></script>
+    <link href="/mermaid/mermaid.css?1725422542" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725422542"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

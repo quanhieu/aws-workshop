@@ -27,13 +27,13 @@ pre = "<b>3. </b>"
      }
      ```
 
-     ![Step 7](./images/2-s3-static/7.step.png)
+     ![Step 7](../../images/2-s3-static/7.step.png)
 
 2. **Kiểm Tra Quyền Truy Cập**
 
    - Đảm bảo các file trong bucket có thể được truy cập công khai qua URL trực tiếp.
 
-     ![Step 8](./images/2-s3-static/8.step.png)
+     ![Step 8](../../images/2-s3-static/8.step.png)
 
    - Kiểm tra Url
-     ![Step 9](./images/2-s3-static/9.step.png)
+     ![Step 9](../../images/2-s3-static/9.step.png)

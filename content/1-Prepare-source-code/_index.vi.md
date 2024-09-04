@@ -18,7 +18,7 @@ Triển khai một website tĩnh bằng Amazon S3 và CloudFront là một giả
      npx create-next-app
    ```
 
-   ![Step 1](./images/1-prepare-nextjs/1.step.png)
+   ![Step 1](../../images/1-prepare-nextjs/1.step.png)
 
 2. **Test source**
 
@@ -28,11 +28,11 @@ Triển khai một website tĩnh bằng Amazon S3 và CloudFront là một giả
      yarn dev
    ```
 
-   ![Step 2](./images/1-prepare-nextjs/2.step.png)
+   ![Step 2](../../images/1-prepare-nextjs/2.step.png)
 
 - Kiểm tra `https://localhost:3000`
 
-  ![Step 3](./images/1-prepare-nextjs/3.step.png)
+  ![Step 3](../../images/1-prepare-nextjs/3.step.png)
 
 3. **Build source**
 
@@ -42,4 +42,4 @@ Triển khai một website tĩnh bằng Amazon S3 và CloudFront là một giả
      yarn build
    ```
 
-   ![Step 4](./images/1-prepare-nextjs/4.step.png)
+   ![Step 4](../../images/1-prepare-nextjs/4.step.png)
