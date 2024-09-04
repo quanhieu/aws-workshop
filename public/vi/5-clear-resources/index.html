@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo và Cấu Hình S3 Bucket :: Triển khai Static Website trên S3 và CloudFront</title>
+    <title>Xóa Tài Nguyên :: Triển khai Static Website trên S3 và CloudFront</title>
 
     
     <link href="/css/nucleus.css?1725467732" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-create-s3-bucket-upload-file/">
+  <body class="" data-url="/vi/5-clear-resources/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -109,8 +109,8 @@
   
     
     <li data-nav-id="/vi/2-create-s3-bucket-upload-file/" title="Tạo và Cấu Hình S3 Bucket" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/vi/2-create-s3-bucket-upload-file/">
@@ -187,8 +187,8 @@
   
     
     <li data-nav-id="/vi/5-clear-resources/" title="Xóa Tài Nguyên" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/vi/5-clear-resources/">
@@ -239,7 +239,7 @@
                   
                     
                     
-                      <option id="en" value="/2-create-s3-bucket-upload-file/">English</option>
+                      <option id="en" value="/5-clear-resources/">English</option>
                     
                   
               
@@ -253,7 +253,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-create-s3-bucket-upload-file/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/5-clear-resources/" selected>Tiếng Việt</option>
                     
                   
               
@@ -339,7 +339,7 @@
             
           
           
-            <a href='/vi/'>Triển khai Static Website trên S3 và CloudFront</a> > Tạo và Cấu Hình S3 Bucket
+            <a href='/vi/'>Triển khai Static Website trên S3 và CloudFront</a> > Xóa Tài Nguyên
           
         
           
@@ -354,7 +354,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#bước-2-tạo-và-cấu-hình-s3-bucket">Bước 2: Tạo và Cấu Hình S3 Bucket</a></li>
+        <li><a href="#step-5-xóa-tài-nguyên">Step 5: Xóa Tài Nguyên</a></li>
       </ul>
     </li>
   </ul>
@@ -374,7 +374,7 @@
           
             <h1>
               
-              Tạo và Cấu Hình S3 Bucket
+              Xóa Tài Nguyên
             </h1>
           
 
@@ -382,39 +382,48 @@
 
 
 
-	<h3 id="bước-2-tạo-và-cấu-hình-s3-bucket">Bước 2: Tạo và Cấu Hình S3 Bucket</h3>
+	<h3 id="step-5-xóa-tài-nguyên">Step 5: Xóa Tài Nguyên</h3>
 <ol>
 <li>
-<p><strong>Tạo S3 Bucket</strong></p>
+<p><strong>Vô hiệu hóa CloudFront</strong></p>
 <ul>
-<li>Truy cập vào AWS Management Console và chọn S3.</li>
-<li>Nhấp vào “Create bucket.”</li>
-<li>Đặt tên cho bucket (ví dụ: <code>ten-bucket-cua-ban</code>) và chọn khu vực phù hợp.</li>
+<li>
+<p>Vào CloudFront -&gt; Chọn CloudFront cần xóa -&gt; Disable</p>
+<p><img src="../../images/4-clear-resources/1.step.png" alt="Step 1"></p>
+</li>
 </ul>
-<p><img src="../../images/2-s3-static/1.step.png" alt="Step 1"></p>
-<ul>
-<li>Tắt tùy chọn “Block all public access” để cho phép truy cập công khai vào bucket (hoặc sử dụng CloudFront để giới hạn truy cập).</li>
-</ul>
-<p><img src="../../images/2-s3-static/2.step.png" alt="Step 2"></p>
 </li>
 <li>
-<p><strong>Tải lên Các File Của Website</strong></p>
+<p><strong>Clear S3 bucket</strong></p>
 <ul>
-<li>Sau khi tạo bucket, vào bucket và tải lên các file HTML, CSS, JavaScript, hình ảnh, v.v.</li>
-</ul>
-<p><img src="../../images/2-s3-static/4.step.png" alt="Step 3"></p>
+<li>
+<p>Vào S3 -&gt; Chọn s3 cần xóa -&gt; Empty</p>
+<p><img src="../../images/4-clear-resources/2.step.png" alt="Step 2"></p>
 </li>
 <li>
-<p><strong>Cấu Hình Bucket Thành Website Tĩnh</strong></p>
-<ul>
-<li>Trong bucket, vào phần “Properties.”</li>
-<li>Tìm mục “Static website hosting” và bật nó lên.</li>
+<p>Gõ &ldquo;permanently delete&rdquo; -&gt; Empty</p>
+<p><img src="../../images/4-clear-resources/3.step.png" alt="Step 3"></p>
+</li>
+<li>
+<p>Chọn s3 cần xóa -&gt; Delete</p>
+<p><img src="../../images/4-clear-resources/4.step.png" alt="Step 4"></p>
+</li>
+<li>
+<p>Gõ tên s3 bucket cần xóa -&gt; Delete bucket</p>
+</li>
 </ul>
-<p><img src="../../images/2-s3-static/5.step.png" alt="Step 5"></p>
+<p><img src="../../images/4-clear-resources/5.step.png" alt="Step 5"></p>
+</li>
+<li>
+<p><strong>Xóa CloudFront</strong></p>
 <ul>
-<li>Chọn “Use this bucket to host a website” và chỉ định file index (ví dụ: <code>index.html</code>) và file lỗi (ví dụ: <code>404.html</code>).</li>
+<li>Quay lại CloudFront -&gt; Chọn CloudFront cần xóa -&gt; Delete</li>
 </ul>
-<p><img src="../../images/2-s3-static/6.step.png" alt="Step 6"></p>
+<p><img src="../../images/4-clear-resources/6.step.png" alt="Step 6"></p>
+<ul>
+<li>Xác nhận Xóa</li>
+</ul>
+<p><img src="../../images/4-clear-resources/7.step.png" alt="Step 7"></p>
 </li>
 </ol>
 
@@ -476,26 +485,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -527,6 +516,23 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -548,10 +554,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/1-prepare-source-code/" title="Chuẩn bị source code"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/4-create-cloudfront-distribution/" title="Thiết lập CloudFront để Tăng Tốc Độ Phân Phối Nội Dung"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-config-permission-s3-bucket/" title="Thiết Lập Quyền Truy Cập" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-prepare-source-code/" title="Chuẩn bị source code" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

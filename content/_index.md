@@ -56,5 +56,6 @@ Deploying a static website using S3 and CloudFront is simple, cost-effective, an
 2. [Create and Configure the S3 Bucket](2-Create-s3-bucket-upload-file/)
 3. [Config permission S3 bucket](3-Config-permission-s3-bucket/)
 4. [Create CloudFront Distribution](4-Create-cloudFront-distribution/)
+5. [Clear Resources](5-Clear-resources/)
 
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->

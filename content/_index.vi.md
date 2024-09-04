@@ -56,4 +56,5 @@ Việc triển khai website tĩnh bằng S3 và CloudFront không chỉ đơn gi
 2. [Tạo và Cấu Hình S3 Bucket](2-Create-s3-bucket-upload-file/)
 3. [Thiết Lập Quyền Truy Cập](3-Config-permission-s3-bucket/)
 4. [Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung](4-Create-cloudFront-distribution/)
+5. [Xóa Tài Nguyên](5-Clear-resources/)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
