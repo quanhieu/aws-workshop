@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.68.3" />
     <meta name="description" content="">
-<meta name="author" content="journeyoftheaverageguy@gmail.com">
+<meta name="author" content="hieutq1188@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Host Static Website on S3 and CloudFront :: AWS Account Setup</title>
+    <title>Host Static Website on S3 and CloudFront :: Host Static Website on S3 and CloudFront</title>
 
     
-    <link href="/css/nucleus.css?1725123105" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725123105" rel="stylesheet">
-    <link href="/css/hybrid.css?1725123105" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725123105" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725123105" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725123105" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725123105" rel="stylesheet">
-    <link href="/css/theme.css?1725123105" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725123105" rel="stylesheet">
+    <link href="/css/nucleus.css?1725419403" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725419403" rel="stylesheet">
+    <link href="/css/hybrid.css?1725419403" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725419403" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725419403" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725419403" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725419403" rel="stylesheet">
+    <link href="/css/theme.css?1725419403" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725419403" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725123105" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725419403" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725123105"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725419403"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725123105"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725123105"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725419403"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725419403"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725123105"></script>
+<script type="text/javascript" src="/js/search.js?1725419403"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" class="dd-item 
+    <li data-nav-id="/1-prepare-source-code/" title="Prepare source code" class="dd-item 
         
         
         
         ">
-      <a href="/1-create-s3-bucket-upload-file/">
-          <b>1. </b>Create and Configure the S3 Bucket
+      <a href="/1-prepare-source-code/">
+          <b>1. </b>Prepare source code
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-config-permission-s3-bucket/" title="Set Up Permissions" class="dd-item 
+    <li data-nav-id="/2-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/2-config-permission-s3-bucket/">
-          <b>2. </b>Set Up Permissions
+      <a href="/2-create-s3-bucket-upload-file/">
+          <b>2. </b>Create and Configure the S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,13 +134,39 @@
  
   
     
-    <li data-nav-id="/3-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" class="dd-item 
+    <li data-nav-id="/3-config-permission-s3-bucket/" title="Set Up Permissions" class="dd-item 
         
         
         
         ">
-      <a href="/3-create-cloudfront-distribution/">
-          <b>3. </b>Set Up CloudFront to Speed Up Content Delivery
+      <a href="/3-config-permission-s3-bucket/">
+          <b>3. </b>Set Up Permissions
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-create-cloudfront-distribution/" title="Set Up CloudFront to Speed Up Content Delivery" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-create-cloudfront-distribution/">
+          <b>4. </b>Set Up CloudFront to Speed Up Content Delivery
           
             <i class="fas fa-check read-icon"></i>
           
@@ -322,9 +348,10 @@
 <p>Deploying a static website using S3 and CloudFront is simple, cost-effective, and provides a fast, secure, and stable web experience for users!</p>
 <h4 id="main-content">Main Content</h4>
 <ol>
-<li><a href="1-Create-s3-bucket-upload-file/">Create and Configure the S3 Bucket</a></li>
-<li><a href="2-Config-permission-s3-bucket/">Config permission S3 bucket</a></li>
-<li><a href="3-Create-cloudFront-distribution/">Create CloudFront Distribution</a></li>
+<li><a href="1-Prepare-source-code/">Prepare source code</a></li>
+<li><a href="2-Create-s3-bucket-upload-file/">Create and Configure the S3 Bucket</a></li>
+<li><a href="3-Config-permission-s3-bucket/">Config permission S3 bucket</a></li>
+<li><a href="4-Create-cloudFront-distribution/">Create CloudFront Distribution</a></li>
 </ol>
 <!-- raw HTML omitted -->
 	
@@ -406,6 +433,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -416,7 +459,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/1-create-s3-bucket-upload-file/" title="Create and Configure the S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prepare-source-code/" title="Prepare source code" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -426,19 +469,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725123105"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725123105"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725123105"></script>
-    <script src="/js/jquery.sticky.js?1725123105"></script>
-    <script src="/js/featherlight.min.js?1725123105"></script>
-    <script src="/js/highlight.pack.js?1725123105"></script>
+    <script src="/js/clipboard.min.js?1725419403"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725419403"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725419403"></script>
+    <script src="/js/jquery.sticky.js?1725419403"></script>
+    <script src="/js/featherlight.min.js?1725419403"></script>
+    <script src="/js/highlight.pack.js?1725419403"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725123105"></script>
-    <script src="/js/learn.js?1725123105"></script>
-    <script src="/js/hugo-learn.js?1725123105"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725419403"></script>
+    <script src="/js/learn.js?1725419403"></script>
+    <script src="/js/hugo-learn.js?1725419403"></script>
 
-    <link href="/mermaid/mermaid.css?1725123105" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725123105"></script>
+    <link href="/mermaid/mermaid.css?1725419403" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725419403"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

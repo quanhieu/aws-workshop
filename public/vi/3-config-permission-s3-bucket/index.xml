@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thiết Lập Quyền Truy Cập on Triển khai Static Website trên S3 và CloudFront</title>
+    <link>/vi/3-config-permission-s3-bucket/</link>
+    <description>Recent content in Thiết Lập Quyền Truy Cập on Triển khai Static Website trên S3 và CloudFront</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 May 2024 00:38:32 +0700</lastBuildDate>
+    
+	<atom:link href="/vi/3-config-permission-s3-bucket/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

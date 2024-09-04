@@ -1,11 +1,11 @@
 +++
-title = "Host Static Website on S3 and CloudFront"
+title = "Triển khai Static Website trên S3 và CloudFront"
 date = 2024
 weight = 1
 chapter = false
 +++
 
-# Host Static Website on S3 and CloudFront
+# Triển khai Static Website trên S3 và CloudFront
 
 ## Tại sao cần triển khai Website Tĩnh bằng Amazon S3 và CloudFront?
 
@@ -52,7 +52,8 @@ Việc triển khai website tĩnh bằng S3 và CloudFront không chỉ đơn gi
 
 #### Main Content
 
-1. [Tạo và Cấu Hình S3 Bucket](1-Create-s3-bucket-upload-file/)
-2. [Thiết Lập Quyền Truy Cập](2-Config-permission-s3-bucket/)
-3. [Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung](3-Create-cloudFront-distribution/)
+1. [Chuẩn bị source code](1-Prepare-source-code/)
+2. [Tạo và Cấu Hình S3 Bucket](2-Create-s3-bucket-upload-file/)
+3. [Thiết Lập Quyền Truy Cập](3-Config-permission-s3-bucket/)
+4. [Thiết Lập CloudFront Để Tăng Tốc Độ Phân Phối Nội Dung](4-Create-cloudFront-distribution/)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
